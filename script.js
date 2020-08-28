@@ -147,8 +147,10 @@ $(document).ready(function() {
     })
 
     function addToArray(city) {
+        console.log(searchHistory.length);
+        var cityDNE = true;
         if (searchHistory.length < 6) {
-            var cityDNE = true;
+
             // console.log(cityDNE);
             for (let i = 0; i < searchHistory.length; i++) {
                 if (city === searchHistory[i]) {
@@ -164,10 +166,10 @@ $(document).ready(function() {
                 // console.log(searchHistory.length);
                 prependCity(searchHistory);
             }
+        } else {
 
-        } else if (searchHistory.length >= 6) {
-            for (let i = 0; i < searchHistory.length; i++) {
-                if (city === searchHistory[i]) {
+            for (let x = 0; x < searchHistory.length; x++) {
+                if (city === searchHistory[x]) {
                     cityDNE = false;
                     console.log("city already exists in array");
                 }

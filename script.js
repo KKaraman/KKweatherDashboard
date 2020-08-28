@@ -49,7 +49,7 @@ $(document).ready(function() {
             $("#cityDate").text(response.name + ", " + response.sys.country + " (" +
                 moment().format('l') +
                 ")");
-            var image = $("<img>").attr("src", "http://openweathermap.org/img/w/" +
+            var image = $("<img>").attr("src", "https://openweathermap.org/img/w/" +
                 response.weather[0].icon + ".png");
             $("#cityDate").append(image);
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
             var cityLon = response.coord.lon;
             var cityLat = response.coord.lat;
-            var UVQueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + cityLat + "&lon=" + cityLon;
+            var UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + cityLat + "&lon=" + cityLon;
             $.ajax({
                 url: UVQueryURL,
                 method: "GET"
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
                 //get the icon for the weather
                 var iconCode = response.list[t].weather[0].icon;
-                var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+                var iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
                 $("#" + i + "Icon").attr("src", iconURL);
                 // console.log(iconCode);
                 t = t + 8;

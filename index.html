@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>KK Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card" style="width: 100%;">
+                <div class="card-header text-center" style="background-color:skyblue; border:black">
+                    <h1 class="text-white">Weather Dashboard</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3" style="background-color:black">
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class=" col ">
+                                <input id="cityName" type="text " class="form-control text-center" placeholder="Enter City Name Here" style="width:100%" />
+                                <button id="citySearch" class="btn text-white" style="background-color:darkgreen; width:100%">Search for city</button>
+                                <br><br> <button id="clearSearch" class="btn " style="background-color:red; width:100%">Clear Search History</button>
+                            </div>
+                        </div>
+                    </form>
+                    <br />
+                    <div class="card ">
+                        <div id="searchHeader" class=" card-header text-center ">
+                            <strong>Recent Searches</strong>
+                        </div>
+                        <ul id="previousSearches" class="list-group list-group-flush ">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col " style="background-color:black ">
+                <div class="card-body ">
+                    <div class="card mb-3 ">
+                        <div class="card-header text-center cityHeader text-white" type="text ">
+                            <h3 id="cityDate">City (Date)</h3>
+                        </div>
+                        <ul class="list-group list-group-flush text-center ">
+                            <li id="cityTemperature" class="list-group-item ">City Temperature</li>
+                            <li id="cityHumidity" class="list-group-item ">City Humidity</li>
+                            <li id="cityWindSpeed" class="list-group-item ">City Wind Speed</li>
+                            <li id="cityUVIndex" class="list-group-item ">Color-Coded City UV Index</li>
+                        </ul>
+                    </div>
+                    <div class="card-header text-center cityHeader text-white">
+                        <h3>Five Day Forecast</h3>
+                    </div>
+                    <div class="card-group ">
+                        <div class="card ">
+                            <div class="card-body text-center ">
+                                <div id="day1Date">Upcoming day 1</div>
+                                <div id="day1Icon">
+                                    <img id="1Icon" src=" " alt="Weather Icon ">
+                                </div>
+                                <div id="day1Temp">Day 1 Temp</div>
+                                <div id="day1Humidity">Day 1 Humidity</div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body text-center ">
+                                <div id="day2Date">Upcoming day 2</div>
+                                <div id="day2Icon">
+                                    <img id="2Icon" src=" " alt="Weather Icon ">
+                                </div>
+                                <div id="day2Temp">Day 2 Temp</div>
+                                <div id="day2Humidity">Day 2 Humidity</div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body text-center ">
+                                <div id="day3Date">Upcoming day 3</div>
+                                <div id="day3Icon">
+                                    <img id="3Icon" src=" " alt="Weather Icon ">
+                                </div>
+                                <div id="day3Temp">Day 3 Temp</div>
+                                <div id="day3Humidity">Day 3 Humidity</div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body text-center ">
+                                <div id="day4Date">Upcoming day 4</div>
+                                <div id="day4Icon">
+                                    <img id="4Icon" src=" " alt="Weather Icon ">
+                                </div>
+                                <div id="day4Temp">Day 4 Temp</div>
+                                <div id="day4Humidity">Day 4 Humidity</div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body text-center ">
+                                <div id="day5Date">Upcoming day 5</div>
+                                <div id="day5Icon">
+                                    <img id="5Icon" src=" " alt="Weather Icon ">
+                                </div>
+                                <div id="day5Temp">Day 5 Temp</div>
+                                <div id="day5Humidity">Day 5 Humidity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+        <script src="script.js "></script>
+</body>
+
+</html>
